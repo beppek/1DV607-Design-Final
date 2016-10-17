@@ -1,0 +1,21 @@
+- Refactored Program.cs and RegistryView.cs
+I agree with Axel that the class is way too long and mostly does what the View is supposed to do anyway.
+I did however find it hard to see what I was supposed to hand over to the controller. I guess my RegistryView is a bit of a ViewController.
+
+- Split the RegistryView class into 2. One to render and one to handle UI.
+When I refactored Program.cs I realised that my RegistryView class would quickly become even larger than the Program class was. So I split all the simple output rendering to its own class.
+
+- Renamed Database.cs to Registry.cs
+I agree with Axel about the naming of the Database class. There is less confusion with this naming.
+
+- Removed dead code
+When I refactored the code I found an unused method in the View to output boat information that I removed. No reviewer noticed the unused method and I can't even remember when I added it. Must've been during early stages.
+
+- Removed ToString methods on the models for Boat and Member
+Axel was correct when he pointed out that rendering strings to represent the models belongs to the View. So I simply removed that and redesigned the output methods in the View.
+
+- Redesigned Sequence diagrams to match the new flow
+Since I renamed and refactored certain things changed in my design. Naming would be the obvious but there were also now methods that no longer needed arguments provided and since I broke out the rendering to it's own class I had to add that in the diagrams.
+
+- Redesigned Class Diagram based on feedback and litterature
+To be honest this one was just as much due to Axel's feedback as it was due to me catching up on the course. The first submission was in the middle of a move for me and setting up a new internet provider took a couple of weeks longer than expected. As a result I was bound by data restrictions on my cell phone's 4G network. Now with proper internet again I am doing my best to catch up. The associations between classes were all represented as dependencies and also lacking some real dependencies. The new diagram is a complete rework of the old one and should hold up to standards.
