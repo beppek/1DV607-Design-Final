@@ -19,3 +19,6 @@ Since I renamed and refactored certain things changed in my design. Naming would
 
 - Redesigned Class Diagram based on feedback and litterature
 To be honest this one was just as much due to Axel's feedback as it was due to me catching up on the course. The first submission was in the middle of a move for me and setting up a new internet provider took a couple of weeks longer than expected. As a result I was bound by data restrictions on my cell phone's 4G network. Now with proper internet again I am doing my best to catch up. The associations between classes were all represented as dependencies and also lacking some real dependencies. The new diagram is a complete rework of the old one and should hold up to standards.
+
+- Updated Install Description
+Axel pointed out that he had some issues with running the program in Visual Studio for the first time. His problem was regarding getting the Newtonsoft JSON package. He recommended that the package should be included. The fault here did not lie in that the package was not included, which it already was, but in my description which poorly explained that if you had any issues to use NuGet to get that package. I updated the description to better reflect that the package is included but to update it in case of any issues. This is in case there are any issues with the external package to handle JSON.
